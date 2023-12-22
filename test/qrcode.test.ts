@@ -12,7 +12,7 @@ describe('QR code', () => {
   });
 
   test.skip('test create', async () => {
-    const request = new QrCodeRequest('https://3ap.ch/en');
+    const request = new QrCodeRequest('https://www.zahls.ch');
     const result = await client.api.qrCode.create(request);
 
     console.log('RESULT', result);

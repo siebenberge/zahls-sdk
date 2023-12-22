@@ -31,8 +31,8 @@ describe('Payout', () => {
 
   test.skip('test create transaction', async () => {
     const request = new TransactionRequest(1500, 'CHF');
-    request.addField('forename', 'Veljko');
-    request.addField('surname', 'Test');
+    request.addField('forename', 'Vorname');
+    request.addField('surname', 'Nachname');
     const result = await client.api.transaction.create(request);
     console.log('RESULT', result);
     console.log('PAYMENT: ', result.data[0].payment);

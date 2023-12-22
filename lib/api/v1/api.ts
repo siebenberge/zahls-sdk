@@ -5,6 +5,7 @@ import { PaymentMethodService } from './service/payment-method-service';
 import { PaymentProviderService } from './service/payment-provider-service';
 import { PayoutService } from './service/payout-service';
 import { QrCodeService } from './service/qrcode-service';
+import { SignatureCheckService } from './service/signature-check-service';
 import { TransactionService } from './service/transaction-service';
 
 export default class Api {
@@ -16,6 +17,7 @@ export default class Api {
   public readonly payout: PayoutService;
   public readonly transaction: TransactionService;
   public readonly design: DesignService;
+  public readonly signatureCheck: SignatureCheckService;
 
   constructor(instance: string, apiSecret: string) {
     this.paylink = new PaylinkService(instance, apiSecret);
@@ -26,5 +28,6 @@ export default class Api {
     this.payout = new PayoutService(instance, apiSecret);
     this.transaction = new TransactionService(instance, apiSecret);
     this.design = new DesignService(instance, apiSecret);
+    this.signatureCheck = new SignatureCheckService(instance, apiSecret);
   }
 }
