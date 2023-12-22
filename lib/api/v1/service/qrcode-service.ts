@@ -9,7 +9,7 @@ export class QrCodeService extends Service {
   /**
    * Retrieve a QR code information
    * @param id The id of QR code
-   * @returns Response from the Payrexx
+   * @returns Response from the zahls.ch
    */
   async retrieve(id: number): Promise<QrCodeResponse> {
     return this.get(`${id}`);
@@ -18,7 +18,7 @@ export class QrCodeService extends Service {
   /**
    * Create a QR code
    * @param request Form data for creation of QR code
-   * @returns Response from the Payrexx
+   * @returns Response from the zahls.ch
    */
   async create(request: QrCodeRequest): Promise<QrCodeResponse> {
     return this.post(request);
@@ -27,7 +27,7 @@ export class QrCodeService extends Service {
   /**
    * Delete a QR code
    * @param id The id of QR code
-   * @returns Response from the Payrexx
+   * @returns Response from the zahls.ch
    */
   async remove(id: number): Promise<QrCodeResponse> {
     return this.delete(`${id}`);

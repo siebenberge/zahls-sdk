@@ -1,14 +1,14 @@
 import { beforeEach, describe, expect, test } from 'vitest';
-import { PaymentProviderResponse, PayrexxClient } from '../lib';
+import { PaymentProviderResponse, ZahlsClient } from '../lib';
 import clientConfig from './client-config';
 
 // THESE TEST ARE TO BE EXECUTED LOCALLY ONLY
 
 describe('Payment provider', () => {
-  let client: PayrexxClient;
+  let client: ZahlsClient;
 
   beforeEach(() => {
-    client = new PayrexxClient(clientConfig.instance, clientConfig.secret);
+    client = new ZahlsClient(clientConfig.instance, clientConfig.secret);
   });
 
   test.skip('test get all', async () => {

@@ -1,8 +1,8 @@
-# Payrexx SDK
+# zahls.ch
 
-**Payrexx SDK** for NodeJS with TypeScript support.
+**zahls.ch SDK** for NodeJS with TypeScript support.
 
-Supported **Payrexx API** functionalities:
+Supported **zahls.ch API** functionalities:
 
 - **Paylink**
 - **Gateway**
@@ -13,15 +13,14 @@ Supported **Payrexx API** functionalities:
 - **Transaction**
 - **Design**
 
-Unsupported **Payrexx API** functionalities:
+Unsupported **zahls.ch API** functionalities:
 
-- **Subscription** API is still in experimental state on the Payrexx, hence it will not be supported by this library
+- **Subscription** API is still in experimental state, hence it will not be supported by this library
 
-Visit the [Payrexx](https://payrexx.com/) for more information.
 
 ## Disclaimer 🚧
 
-This library is unofficial and is developed independently from the Payrexx payment provider.
+This library is a fork of the unofficial payrexx-sdk which is developed independently.
 
 Please note that **QR code** is not fully tested.
 
@@ -30,18 +29,18 @@ Please note that **QR code** is not fully tested.
 Install library by running command
 
 ```shell
-npm i payrexx-sdk
+npm i zahls-sdk
 ```
 
-Start by creating the Payrexx client. You will need to provide your **Payrexx** instance and API secret.
+Start by creating the zahls.ch client. You will need to provide your **zahls.ch** instance and API secret.
 
 ```ts
-const client = new PayrexxClient('PAYREXX_INSTANCE', 'API_SECRET')
+const client = new ZahlsClient('ZAHLS_INSTANCE', 'API_SECRET')
 ```
 
 ### API
 
-API is grouped by Payrexx functionalities:
+API is grouped by zahls.ch functionalities:
 
 ```ts
 client.api.paylink

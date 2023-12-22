@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
-      name: 'payrexx-sdk',
-      fileName: 'payrexx-sdk',
+      name: 'zahls-sdk',
+      fileName: 'zahls-sdk',
     },
   },
   plugins: [dts()],

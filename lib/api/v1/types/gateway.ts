@@ -281,7 +281,7 @@ class GatewayRequest {
   }
 
   /**
-   * @param concardisOrderId Only available for Concardis PSP and if the custom ORDERID option is activated in PSP settings in Payrexx administration. This ORDERID will be transferred to the Payengine
+   * @param concardisOrderId Only available for Concardis PSP and if the custom ORDERID option is activated in PSP settings in zahls.ch administration. This ORDERID will be transferred to the Payengine
    */
   public setConcardisOrderId(concardisOrderId: string) {
     this.concardisOrderId = concardisOrderId;

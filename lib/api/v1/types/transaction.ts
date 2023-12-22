@@ -2,7 +2,7 @@ import { Response } from '../../interface/response';
 
 /**
  * Some properties are available only when doing GET and others when doing POST requests.
- * Consult with Payrexx [API](https://developers.payrexx.com/reference/rest-api) if you need assistance.
+ * Consult with [API](https://developers.payrexx.com/reference/rest-api) if you need assistance.
  */
 interface TransactionResponse extends Response {
   data: TransactionData[];

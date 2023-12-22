@@ -1,4 +1,4 @@
-import { PayrexxClient } from './api/client';
+import { ZahlsClient } from './api/client';
 import {
   TransactionResponse,
   TransactionRequest,
@@ -16,7 +16,7 @@ import { PayoutResponse, PayoutsResponse } from './api/v1/types/payout';
 import { DesignResponse, DesignRequest } from './api/v1/types/design';
 
 export {
-  PayrexxClient,
+  ZahlsClient,
   PaylinkRequest,
   GatewayRequest,
   QrCodeRequest,

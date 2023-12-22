@@ -13,7 +13,7 @@ export class TransactionService extends Service {
   /**
    * Retrieve a transaction
    * @param id The id of a transaction
-   * @returns Response from the Payrexx
+   * @returns Response from zahls.ch
    */
   async retrieve(id: number): Promise<TransactionResponse> {
     return this.get(`${id}`);
@@ -21,7 +21,7 @@ export class TransactionService extends Service {
 
   /**
    * Retrieve all transactions
-   * @returns Response from the Payrexx
+   * @returns Response from zahls.ch
    */
   async retrieveAll(): Promise<TransactionResponse> {
     return this.get();
@@ -30,7 +30,7 @@ export class TransactionService extends Service {
   /**
    * Create a cash transaction
    * @param request Form data for creation of transaction
-   * @returns Response from the Payrexx
+   * @returns Response from zahls.ch
    */
   async create(request: TransactionRequest): Promise<TransactionResponse> {
     return this.post(request);
@@ -46,7 +46,7 @@ export class TransactionService extends Service {
    * - **purpose** - The purpose of the charge
    *
    * - **referenceId** - Reference id for charged transaction. Will be available in transaction webhook
-   * @returns Response from the Payrexx
+   * @returns Response from zahls.ch
    */
   async charge(
     id: number,
@@ -59,7 +59,7 @@ export class TransactionService extends Service {
    * Refund a transaction
    * @param id The id of the transaction to refund
    * @param amount Custom amount to refund in cents. If not set, the whole amount will be refunded
-   * @returns Response from the Payrexx
+   * @returns Response from zahls.ch
    */
   async refund(id: number, amount?: number): Promise<TransactionResponse> {
     return this.post({ amount }, `${id}/refund`);
@@ -68,7 +68,7 @@ export class TransactionService extends Service {
   /**
    * Capture a Transaction
    * @param id The id of the transaction to capture
-   * @returns Response from the Payrexx
+   * @returns Response from zahls.ch
    */
   async capture(id: number): Promise<TransactionResponse> {
     return this.post({}, `${id}/capture`);
@@ -78,7 +78,7 @@ export class TransactionService extends Service {
    * Send mail receipt
    * @param id The id of the transaction with receipt
    * @param recipient Email address of recipient
-   * @returns Response from the Payrexx
+   * @returns Response from zahls.ch
    */
   async sendMailReceipt(
     id: number,
@@ -90,7 +90,7 @@ export class TransactionService extends Service {
   /**
    * Delete a reserved transaction
    * @param id The id of reserved transaction to cancel/delete
-   * @returns Response from the Payrexx
+   * @returns Response from zahls.ch
    */
   async remove(id: number): Promise<TransactionResponse> {
     return this.delete(`${id}`);

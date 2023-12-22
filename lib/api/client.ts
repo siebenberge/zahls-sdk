@@ -1,6 +1,6 @@
 import Api from './v1/api';
 
-export class PayrexxClient {
+export class ZahlsClient {
   public readonly api: Api;
 
   constructor(instance: string, apiSecret: string) {

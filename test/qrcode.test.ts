@@ -1,14 +1,14 @@
 import { beforeEach, describe, expect, test } from 'vitest';
-import { PayrexxClient, QrCodeRequest } from '../lib';
+import { ZahlsClient, QrCodeRequest } from '../lib';
 import clientConfig from './client-config';
 
-// UNABLE TO TEST QR CODE ATM, TWINT IS NOT ENABLED ON THE PAYREXX
+// UNABLE TO TEST QR CODE ATM, TWINT IS NOT ENABLED
 
 describe('QR code', () => {
-  let client: PayrexxClient;
+  let client: ZahlsClient;
 
   beforeEach(() => {
-    client = new PayrexxClient(clientConfig.instance, clientConfig.secret);
+    client = new ZahlsClient(clientConfig.instance, clientConfig.secret);
   });
 
   test.skip('test create', async () => {

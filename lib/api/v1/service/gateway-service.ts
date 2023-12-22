@@ -9,7 +9,7 @@ export class GatewayService extends Service {
   /**
    * Retrieve a gateway payment information
    * @param id The id of gateway payment
-   * @returns Response from the Payrexx
+   * @returns Response from the zahls.ch
    */
   async retrieve(id: number): Promise<GatewayResponse> {
     return this.get(`${id}`);
@@ -18,7 +18,7 @@ export class GatewayService extends Service {
   /**
    * Create a gateway payment
    * @param request Form data for creation of gateway payment
-   * @returns Response from the Payrexx
+   * @returns Response from the zahls.ch
    */
   async create(request: GatewayRequest): Promise<GatewayResponse> {
     return this.post(request);
@@ -27,7 +27,7 @@ export class GatewayService extends Service {
   /**
    * Delete a gateway payment
    * @param id The id of gateway payment
-   * @returns Response from the Payrexx
+   * @returns Response from the zahls.ch
    */
   async remove(id: number): Promise<GatewayResponse> {
     return this.delete(`${id}`);

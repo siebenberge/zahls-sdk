@@ -9,7 +9,7 @@ export abstract class Service {
   constructor(instance: string, apiSecret: string, endpoint: string) {
     this.instance = instance;
     this.authHelper = new AuthHelper(apiSecret);
-    this.baseUrl = `https://api.payrexx.com/v1.0/${endpoint}`;
+    this.baseUrl = `https://api.zahls.ch/v1.0/${endpoint}`;
   }
 
   protected async get<T extends Response>(path?: string): Promise<T> {
@@ -82,7 +82,7 @@ export abstract class Service {
     if (result.status === 'error') {
       throw new Error(
         result.message ||
-          'Something went wrong with the API call! \n Error message from the Payrexx is unavailable',
+          'Something went wrong with the API call! \n Error message from zahls.ch is unavailable',
       );
     } else {
       return result;
